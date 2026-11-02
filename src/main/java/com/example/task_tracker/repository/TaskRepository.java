@@ -37,4 +37,8 @@ public class TaskRepository {
         return tasks.stream()
                 .anyMatch(task -> task.getId().equals(id));
     }
+    public void clearAll() {
+        tasks.clear();
+        nextId = 1L;
+    }
 }
